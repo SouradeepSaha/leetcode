@@ -7,9 +7,6 @@ class TreeNode:
 
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        if root is None:
-            return []
-        
         queue = [(root, 1)]
         ans = []
         curlevel = 0

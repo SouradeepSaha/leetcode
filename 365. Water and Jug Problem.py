@@ -22,7 +22,7 @@ class Solution:
         
         return False
 
-# Math Solution
+# Math Solution using Bezout's lemma
 from fractions import gcd      
 def canMeasureWater(self, x, y, z):
     return z == 0 or x + y >= z and z % gcd(x, y) == 0

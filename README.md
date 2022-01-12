@@ -12,3 +12,8 @@ The most popular types of dynamic programming problems are:
   - 1 Dimension cache using O(n) space
   - Can be solved with O(1) space in certain cases
 - Zero/One Knapsack:
+  - Each item can be used 0/1 times only
+  - 2 Dimension cache using using O(n x m) space
+- Unbounded Knapsack:
+- Longest Common Subsequence
+- Palindromes

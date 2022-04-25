@@ -1,0 +1,27 @@
+class Solution:
+    def isMatch(self, s: str, p: str) -> bool:
+        
+        cache = dict()
+        
+        def recurse(sInd, pInd):
+            print(sInd, pInd) 
+            if sInd >= len(s) and pInd >= len(p):
+                return True
+            
+            if pInd >= len(p):
+                return False
+            
+            if (sInd, pInd) not in cache:       
+                if pInd < len(p)-1 and p[pInd+1] == '*':
+                    if sInd < len(s) and (s[sInd] == p[pInd] or p[pInd] == '.'):
+                        cache[(sInd, pInd)] = recurse(sInd+1, pInd) or recurse(sInd, pInd+2)
+                    else:
+                        cache[(sInd, pInd)] = recurse(sInd, pInd+2)
+                elif sInd < len(s) and (s[sInd] == p[pInd] or p[pInd] == '.'):
+                    cache[(sInd, pInd)] = recurse(sInd+1, pInd+1)
+                else:
+                    cache[(sInd, pInd)] = False
+                
+            return cache[(sInd, pInd)]
+                        
+        return recurse(0,0) 

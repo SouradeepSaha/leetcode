@@ -17,3 +17,17 @@ The most popular types of dynamic programming problems are:
 - Unbounded Knapsack:
 - Longest Common Subsequence
 - Palindromes
+
+### Backtracking
+Run through all possible configurations of search space. Must generate each configuration exactly once. 
+How to model the problem:
+- Need systematic generation order to avoid repetitions
+- Use vector a=(a_1, a_2, a_3,...,a_n)
+- 
+
+Applications: 
+- Generate all permutations
+- Generate all subsets
+- Enumerate all spanning trees of graph
+- All paths between two vertices
+- All possible ways to partition vertices into color class
